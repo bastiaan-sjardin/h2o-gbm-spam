@@ -16,8 +16,8 @@ urllib.urlretrieve(url, filename)
 h2o.init()           
 
 
-
-spamdata = h2o.import_file(os.path.realpath("/Users/Quandbee1/Desktop/pthw/spamdata.data"))
+#specify your path here
+spamdata = h2o.import_file(os.path.realpath("/Users/spamdata.data"))
 spamdata['C58']=spamdata['C58'].asfactor()
 train, valid, test= spamdata.split_frame([0.6,.2], seed=1234)
 
